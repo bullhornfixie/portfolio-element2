@@ -4,37 +4,15 @@ import { colors, font, sizes } from './styles/variables'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
-
-const Layout = ({children}) => {
-  return (
-    <Flex 
-      flexDirection='column' 
-      height='100vh' 
-      bg={colors.navy}>
-      {children}
-    </Flex>
-  )
-}
-
-const Header = () => {
-  return (
-    <Flex
-      height='20vh'
-      bg={colors.grey}>
-    </Flex>
-  )
-}
-
+import Layout from './components/layout'
 
 const App = () => {
   return (
-    <Layout>
-      <Header />
-        <Canvas>
-          
-        </Canvas>
-    </Layout>
+    <Layout> 
+      <Canvas>
 
+      </Canvas>
+    </Layout>
   );
 }
 
