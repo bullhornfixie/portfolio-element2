@@ -22,8 +22,10 @@ const CanvasContainer = styled.div`
   background: ${colors.white};
   width: 100vw;
   height: 90vh;
-  pointer-events: none;
+  pointer-events: auto; 
 `;
+
+// pointer-events: none; will turn off orbitControl
 
 const Banner = styled.div`
   background: ${colors.navy};
@@ -36,12 +38,13 @@ const Banner = styled.div`
 const App = () => {
   return (
     <Layout> 
-      <Banner>Hello</Banner>
-      <CanvasContainer> 
-        <Canvas>
-          <ThreeBox />
-        </Canvas>
-      </CanvasContainer>  
+       <Banner />
+        <CanvasContainer> 
+          <Canvas>
+            <OrbitControls />
+            <ThreeBox />
+          </Canvas>
+        </CanvasContainer>  
     </Layout>
   );
 }
