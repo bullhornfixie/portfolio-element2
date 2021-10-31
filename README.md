@@ -6,4 +6,4 @@
 - `npm start`
 
 ## About
-This forms part 2 of my portfolio. # portfolio-element2
+This forms part 2 of my portfolio. 
