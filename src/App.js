@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './styles/App.css';
+import styled from 'styled-components'
+import { Flex, Box, Heading, Image, Text } from 'rebass'
+import { colors, font, sizes } from './styles/variables'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, RoundedBox } from '@react-three/drei';
+import * as THREE from 'three';
 
-function App() {
+const Layout = ({children}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex 
+      flexDirection='column' 
+      height='100vh' 
+      bg={colors.navy}>
+      {children}
+    </Flex>
+  )
+}
+
+const Header = () => {
+  return (
+    <Flex
+      height='20vh'
+      bg={colors.grey}>
+    </Flex>
+  )
+}
+
+
+const App = () => {
+  return (
+    <Layout>
+      <Header />
+        <Canvas>
+          
+        </Canvas>
+    </Layout>
+
   );
 }
 
