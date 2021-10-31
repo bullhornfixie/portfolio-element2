@@ -6,12 +6,42 @@ import { OrbitControls, RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 import Layout from './components/layout'
 
+// <mesh /> dynmically becomes new THREE.Mesh()
+// e.g. new THREE.Mesh( geometry, material )
+
+const ThreeBox = () => {
+  return (
+    <mesh> 
+      <boxBufferGeometry attach='geometry' />
+      <meshLambertMaterial attach="material" color={colors.hotPink} />
+    </mesh>
+  )
+}
+
+const CanvasContainer = styled.div`
+  background: ${colors.white};
+  width: 100vw;
+  height: 90vh;
+  pointer-events: none;
+`;
+
+const Banner = styled.div`
+  background: ${colors.navy};
+  color: ${colors.white};
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+`
+
 const App = () => {
   return (
     <Layout> 
-      <Canvas>
-
-      </Canvas>
+      <Banner>Hello</Banner>
+      <CanvasContainer> 
+        <Canvas>
+          <ThreeBox />
+        </Canvas>
+      </CanvasContainer>  
     </Layout>
   );
 }

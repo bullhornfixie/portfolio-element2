@@ -29,7 +29,7 @@ const colors = {
   navy: '#28334AFF',
   coral: '#F88379',
   mustard: '#E6BE03',
-  
+  hotPink: '#FF69B4',
   transparent: 'rgba(255,255,255,0)',
   overlay: 'rgba(00,00,00,0.5)',
 }

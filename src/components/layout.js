@@ -1,6 +1,5 @@
-import styled from 'styled-components'
-import { Flex, Box, Heading, Image, Text } from 'rebass'
-import { colors, font, sizes } from '../styles/variables'
+import { Flex } from 'rebass'
+import { colors } from '../styles/variables'
 
 const Layout = ({children}) => {
   return (
