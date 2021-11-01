@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 import Layout from './components/layout'
+import { AmbientLight } from 'three';
 
 // <mesh /> dynmically becomes new THREE.Mesh()
 // e.g. new THREE.Mesh( geometry, material )
@@ -42,6 +43,7 @@ const App = () => {
         <CanvasContainer> 
           <Canvas>
             <OrbitControls />
+            <ambientLight intensity={0.5}/>
             <ThreeBox />
           </Canvas>
         </CanvasContainer>  
